@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
-
+import { environment } from '../environments/environment';
 
 @Injectable({
     providedIn: 'root'
@@ -9,7 +9,6 @@ import { Observable, map } from 'rxjs';
 export class TextExtractionService {
 
     private apiUrl = 'https://api.api-ninjas.com/v1/imagetotext';
-    private apiKey = 'jibFou9VztJiAnVklyOBuEd5uW8BXWJZBHpPuFL3';
 
     constructor(private http: HttpClient) { }
 
@@ -21,7 +20,7 @@ export class TextExtractionService {
             formData,
             {
                 headers: {
-                    'X-Api-Key': this.apiKey
+                    'X-Api-Key': environment.apiNinjasApiKey
                 }
             }
         ).pipe(

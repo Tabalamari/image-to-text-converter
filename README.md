@@ -6,6 +6,26 @@ A web application built with Angular that uses a public API (e.g., API Ninjas) t
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
 
+## API Key Setup
+
+This project uses the **API Ninjas** service for image-to-text extraction.
+
+To run the project locally:
+
+1. Create an account at https://api-ninjas.com
+2. Get your API key
+3. Open the file:
+
+   src/environments/environment.ts
+
+4. Replace the placeholder value:
+
+   apiNinjasApiKey: 'PASTE_YOUR_API_KEY_HERE'
+
+! Note:  
+API keys cannot be fully hidden in frontend applications.  
+For production use, the API call should be moved to a backend service.
+
 ## Development server
 
 To start a local development server, run:
