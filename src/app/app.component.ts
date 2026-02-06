@@ -79,5 +79,12 @@ export class AppComponent {
             }
         });
     }
+    copyText(): void {
+        navigator.clipboard.writeText(this.extractedText).then(() => {
+            alert('Text copied to clipboard!');
+        }).catch(err => {
+            console.error('Failed to copy text: ', err);
+        });
+    }
 
 }
